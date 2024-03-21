@@ -7,7 +7,7 @@ import Nav from "./Nav";
 const Header = () => {
     const [showNav, setShowNav] = useState(false);
   return (
-    <header className="flex justify-between">
+    <header className="flex justify-between relative bg-white bg-opacity-50 px-2">
       <div>
         <h1 className="text-3xl font-extrabold text-blue-600">
           Daniel (DJ) Hersh

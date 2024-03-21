@@ -3,8 +3,8 @@ import Nav from "@/components/Nav";
 
 export default function Home() {
   return (
-    <main className="mx-auto px-2 pt-2">
-      <div>
+    <main className="mx-auto">
+      <div className="sticky top-0 z-10">
         <Header />
       </div>
       {/* <div className="flex justify-end pr-16 z-10">
