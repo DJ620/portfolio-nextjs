@@ -7,19 +7,19 @@ type navProps = {
 
 const Nav = () => {
   const NavLink = ({ page }: navProps) => {
-    return <Link href={`/${page}`} className="px-2 hover:bg-blue-600 hover:text-white hover:shadow-md hover:shadow-black">{page}</Link>;
+    return (
+      <div className="px-4 py-2 text-center hover:bg-blue-500 hover:bg-opacity-75 hover:text-slate-200 hover:shadow-sm hover:shadow-black">
+        <Link href={`/${page}`} className="p-2">
+          {page}
+        </Link>
+      </div>
+    );
   };
   return (
-    <div className="absolute top-16 bg-white bg-opacity-50 rounded-bl right-0 text-blue-600 text-xl">
-      <div>
-        <NavLink page="Portfolio" />
-      </div>
-      <div>
-        <Link href="">About</Link>
-      </div>
-      <div>
-        <Link href="">Contact</Link>
-      </div>
+    <div className="absolute md:flex md:top-0 md:bg-transparent top-[52px] bg-slate-200 bg-opacity-50 rounded-bl -right-2 text-blue-500 text-3xl">
+      <NavLink page="Portfolio" />
+      <NavLink page="About" />
+      <NavLink page="Contact" />
     </div>
   );
 };
