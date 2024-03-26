@@ -1,27 +1,27 @@
 import Image from "next/image";
 import React from "react";
 import fancyHeadshot from "../../public/images/fancyheadshot-png.png";
+import Toolbox from "./Toolbox";
 
 const Landing = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center pt-5 text-center">
-      <div className="w-screen h-full pt-2">
-        <Image
-          src={fancyHeadshot}
-          alt="headshot"
-        //   width={250}
-        //   height={250}
-          className="w-auto h-[600px] drop-shadow-2xl"
-        />
+    <div className="text-center">
+      <div className="md:flex md:flex-row-reverse">
+        <div className="mx-auto my-5 md:flex md:flex-col md:items-center md:justify-center">
+          <p className="font-extrabold text-blue-500 text-7xl lg:text-8xl 2xl:text-9xl text-shadow-lg shadow-slate-400">
+            DJ Hersh
+          </p>
+          <p className="text-3xl font-bold lg:text-4xl 2xl:text-5xl sm:text-nowrap">Frontend Web Developer</p>
+        </div>
+        <div>
+          <Image
+            src={fancyHeadshot}
+            alt="headshot"
+            className="h-auto w-[450px] xl:w-[500px] md:pt-5 drop-shadow-2xl"
+          />
+        </div>
       </div>
-      <div className="w-screen bg-blue-500 shadow-2xl shadow-slate-600">
-        <p className="py-3 text-5xl font-extrabold text-white">Hello, I'm Daniel</p>
-      </div>
-      {/* <div className="w-screen mt-5 text-white bg-blue-600 shadow-2xl"> */}
-        <p className="mt-10 text-4xl mb-28">
-          (but you can call me <span className="px-1 italic font-bold">DJ</span>)
-        </p>
-      {/* </div> */}
+      <div className="w-full h-20 bg-blue-500 shadow-2xl shadow-slate-700" />
     </div>
   );
 };
