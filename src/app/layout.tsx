@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 
-const ss3 = Exo_2({ subsets: ["latin"] });
+const exo2 = Exo_2({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Daniel (DJ) Hersh",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ss3.className}>{children}</body>
+      <body className={exo2.className}>{children}</body>
     </html>
   );
 }
