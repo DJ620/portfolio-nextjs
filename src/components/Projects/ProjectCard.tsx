@@ -22,7 +22,7 @@ const ProjectCard = ({ picture, alt }: props) => {
         onClick={openProject}
       >
         <Image src={picture} alt={alt} fill />
-        <div className="absolute flex flex-col justify-between w-full h-full text-center transition-opacity duration-500 ease-in opacity-0 hover:opacity-100">
+        <div className="absolute flex flex-col justify-between w-full h-full text-center transition-opacity duration-300 ease-in opacity-0 hover:opacity-100">
           <div className="flex flex-col items-center justify-center h-full gap-20 bg-opacity-90 bg-cyan-700">
             <p className="text-2xl font-extrabold">DJ's Wordle</p>
             <button className="px-5 py-2 border border-black rounded">
