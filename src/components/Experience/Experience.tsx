@@ -1,5 +1,4 @@
 import React from "react";
-import Toolbox from "../Toolbox";
 import Resume from "./Resume";
 
 const Experience = () => {

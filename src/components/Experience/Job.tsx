@@ -35,7 +35,7 @@ const Job = ({ job, currentJob, setCurrentJob }: jobProp) => {
   };
 
   return (
-    <div className="">
+    <div className="text-base">
       <div className="md:flex md:justify-between">
         <div
           className="flex justify-between cursor-pointer md:hidden"

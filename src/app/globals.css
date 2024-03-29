@@ -17,3 +17,7 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
+
+.roboto {
+    font-family: var(--font-roboto-mono);
+}

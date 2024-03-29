@@ -4,7 +4,7 @@ import React from "react";
 import fancyHeadshot from "../../../public/images/fancyheadshot-png.png";
 import { motion } from "framer-motion";
 import LandingSVG from "./LandingSVG";
-import Burst from "./Burst";
+import HeroSVG from "./HeroSVG";
 
 const Landing = () => {
   return (

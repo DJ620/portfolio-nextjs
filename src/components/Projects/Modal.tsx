@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { roboto } from "../../../public/Assets/Fonts";
 
 type props = {
   project: {
@@ -25,10 +26,10 @@ const Modal = ({ project }: props) => {
               className="rounded-lg h-96 w-auto mx-auto md:mx-0 md:w-[50vw] max-w-[700px] md:h-auto md:rounded-none"
             />
             <div className="px-4 md:w-[46vw] max-w-[700px]">
-              <h1 className="text-3xl text-center text-cyan-700 font-semibold mb-2 xl:mb-8">
+              <h1 className="text-3xl text-center text-cyan-700 font-semibold mb-2 md:mb-8">
                 {project.name}
               </h1>
-              <div className="max-h-[350px] lg:max-h-[550px] xl:max-h-full pb-2 overflow-scroll">
+              <div className={`max-h-[350px] lg:max-h-[550px] xl:max-h-full pb-2 overflow-scroll ${roboto.className} text-base`}>
                 <p>
                   {project.description}
                 </p>

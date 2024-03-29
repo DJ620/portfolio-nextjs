@@ -1,32 +1,44 @@
 "use client";
-import React from "react";
+import { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
+import { useScroll, useTransform, motion } from "framer-motion";
 
-type props = {
-  project: {
-    name: string
-    deployed: string
-    image: StaticImageData
-    repo: string
-    description: string
-    tech: string[]
-  },
-  setSelectedProject: any
+type project = {
+  name: string;
+  deployed: string;
+  image: StaticImageData;
+  repo: string;
+  description: string;
+  tech: string[];
 };
 
-const ProjectCard = ({ project, setSelectedProject }: props) => {
-  
+type props = {
+  project: project;
+  setProject: (project: project) => void;
+};
+
+const ProjectCard = ({ project, setProject }: props) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const openProject = () => {
-    setSelectedProject(project);
+    setProject(project);
     (document.getElementById("my_modal_2") as HTMLDialogElement).showModal();
   };
 
   return (
     <>
-      <div
+      <motion.div
         className="relative overflow-hidden cursor-pointer w-72 h-96 bg-cyan-700"
         onClick={openProject}
+        ref={ref}
+        style={{ scale: scaleProgress, opacity: opacityProgress }}
       >
         <Image src={project.image} alt={project.name} fill />
         <div className="absolute flex flex-col justify-between w-full h-full text-center transition-opacity duration-300 ease-in opacity-0 hover:opacity-100">
@@ -37,7 +49,7 @@ const ProjectCard = ({ project, setSelectedProject }: props) => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
