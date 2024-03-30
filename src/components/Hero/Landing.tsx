@@ -4,7 +4,8 @@ import React from "react";
 import fancyHeadshot from "../../../public/images/fancyheadshot-png.png";
 import { motion } from "framer-motion";
 import LandingSVG from "./LandingSVG";
-import HeroSVG from "./HeroSVG";
+import { TypeAnimation } from "react-type-animation";
+import { roboto } from "../../../public/Assets/Fonts";
 
 const Landing = () => {
   return (
@@ -23,9 +24,37 @@ const Landing = () => {
             <p className="font-extrabold text-white text-7xl lg:text-8xl 2xl:text-9xl">
               DJ HERSH
             </p>
-            <p className="text-3xl font-bold text-neutral-800 lg:text-4xl 2xl:text-5xl sm:text-nowrap z-10">
+            <p className="text-3xl font-bold text-neutral-800 lg:text-4xl 2xl:text-5xl sm:text-nowrap">
               Frontend Web Developer
             </p>
+            <div className="mt-5 text-lg h-20 w-[90vw] md:w-[460px] md:mt-20 md:h-auto xl:text-xl 2xl:text-2xl 2xl:w-[650px] xl:w-[550px] mx-auto">
+              <TypeAnimation
+                sequence={[
+                  "I like to build things using HTML",
+                  1000,
+                  "I like to build things using CSS",
+                  1000,
+                  "I like to build things using JavaScript",
+                  1000,
+                  "I like to build things using React",
+                  1000,
+                  "I like to build things using TypeScript",
+                  1000,
+                  "I like to build things using Next.js",
+                  1000,
+                  "I like to build things using React Native",
+                  1000,
+                  "I like to build things using Redux",
+                  1000,
+                  "I like to build things using TailwindCSS",
+                  1000,
+                ]}
+                speed={50}
+                repeat={Infinity}
+                className={`${roboto.className}`}
+              />
+              {/* <p className={roboto.className}>I like to build things using React Native</p> */}
+            </div>
           </div>
           <div>
             <Image

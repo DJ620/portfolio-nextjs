@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <div className="px-8 pt-16 md:px-16 lg:px-32 contain-section" id="Work">
-      <h1 className="pb-10 text-5xl font-bold text-cyan-700">Projects</h1>
+      <h1 className="pb-10 text-4xl font-bold text-cyan-700">PROJECTS</h1>
       <div
         className="flex flex-wrap justify-center gap-px"
       >

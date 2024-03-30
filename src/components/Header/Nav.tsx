@@ -12,7 +12,7 @@ type navProps = {
 const Nav = ({ setShowNav }: prop) => {
   const NavLink = ({ page }: navProps) => {
     return (
-      <div className="px-4 py-2 text-center hover:bg-cyan-700 md:rounded hover:text-white hover:shadow-sm hover:shadow-black">
+      <div className="px-4 py-2 text-center hover:bg-cyan-700 md:rounded hover:text-white uppercase hover:shadow-sm hover:shadow-black">
         <Link
           href={`#${page}`}
           className="p-2"
@@ -24,7 +24,7 @@ const Nav = ({ setShowNav }: prop) => {
     );
   };
   return (
-    <div className="absolute md:flex md:top-3 md:pr-1 md:sticky md:bg-transparent md:right-0 top-[45px] bg-white bg-opacity-85 shadow-2xl md:shadow-none rounded-bl-lg -right-4 text-cyan-700 text-3xl">
+    <div className="fixed md:flex md:top-3 md:pr-1 md:sticky md:bg-transparent top-[55.5px] bg-white bg-opacity-90 shadow-2xl md:shadow-none rounded-bl-lg right-0 text-cyan-700 text-2xl md:text-xl">
       <NavLink page="About" />
       <NavLink page="Experience" />
       <NavLink page="Work" />

@@ -1,609 +1,105 @@
 import * as React from "react"
 const HeroSVG = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" className="min-h-full">
-    <defs>
-      <filter
-        id="a"
-        width="140%"
-        height="140%"
-        x="-20%"
-        y="-20%"
-        colorInterpolationFilters="sRGB"
-        filterUnits="objectBoundingBox"
-        primitiveUnits="userSpaceOnUse"
-      >
-        <feTurbulence
-          width="100%"
-          height="100%"
-          x="0%"
-          y="0%"
-          baseFrequency="0.022 0.218"
-          numOctaves={2}
-          result="turbulence"
-          seed={2}
-          stitchTiles="stitch"
-        />
-        <feGaussianBlur
-          width="100%"
-          height="100%"
-          x="0%"
-          y="0%"
-          in="turbulence"
-          result="blur"
-          stdDeviation="0 3"
-        />
-        <feDisplacementMap
-          width="100%"
-          height="100%"
-          x="0%"
-          y="0%"
-          in="SourceGraphic"
-          in2="blur"
-          result="displacementMap"
-          scale={32}
-          xChannelSelector="R"
-          yChannelSelector="B"
-        />
-      </filter>
-    </defs>
-    <rect width="100%" height="100%" fill="rgb(14 116 144)" />
-    <g fill="hsl(32, 100%, 51%)" filter="url(#a)">
-      <circle cx={302.692} cy={411.331} r={4.953} opacity={0.948} />
-      <circle cx={289.096} cy={492.161} r={4.186} opacity={0.364} />
-      <circle cx={230.775} cy={757.226} r={4.668} opacity={0.821} />
-      <circle cx={710.939} cy={652.605} r={8.105} opacity={0.923} />
-      <circle cx={660.653} cy={16.565} r={6.62} opacity={0.636} />
-      <circle cx={333.859} cy={94.972} r={7.537} opacity={0.499} />
-      <circle cx={117.178} cy={633.407} r={5.349} opacity={0.71} />
-      <circle cx={503.688} cy={437.279} r={6.898} opacity={0.818} />
-      <circle cx={239.272} cy={373.043} r={6.683} opacity={0.995} />
-      <circle cx={205.803} cy={597.878} r={3.849} opacity={0.148} />
-      <circle cx={560.669} cy={670.439} r={5.986} opacity={0.934} />
-      <circle cx={21.192} cy={648.636} r={5.944} opacity={0.799} />
-      <circle cx={111.841} cy={305.639} r={6.694} opacity={0.378} />
-      <circle cx={623.609} cy={222.366} r={2.441} opacity={0.286} />
-      <circle cx={786.826} cy={144.922} r={5.291} opacity={0.755} />
-      <circle cx={701.009} cy={764.288} r={3.69} opacity={0.168} />
-      <circle cx={186.191} cy={359.696} r={4.182} opacity={0.776} />
-      <circle cx={338.818} cy={223.105} r={4.433} opacity={0.712} />
-      <circle cx={278.055} cy={376.405} r={7.114} opacity={0.358} />
-      <circle cx={154.361} cy={644.45} r={6.025} opacity={0.647} />
-      <circle cx={596.296} cy={544.412} r={5.634} opacity={0.35} />
-      <circle cx={244.494} cy={339.927} r={5.102} opacity={0.819} />
-      <circle cx={29.485} cy={106.557} r={5.045} opacity={0.605} />
-      <circle cx={131.8} cy={232.893} r={7.185} opacity={0.89} />
-      <circle cx={229.32} cy={454.365} r={5.03} opacity={0.103} />
-      <circle cx={381.489} cy={274.951} r={5.011} opacity={0.322} />
-      <circle cx={473.167} cy={588.688} r={3.327} opacity={0.858} />
-      <circle cx={785.435} cy={669.336} r={7.204} opacity={0.165} />
-      <circle cx={560.501} cy={638.94} r={3.723} opacity={0.338} />
-      <circle cx={138.22} cy={482.021} r={3.603} opacity={0.509} />
-      <circle cx={408.011} cy={464.985} r={6.726} opacity={0.621} />
-      <circle cx={280.727} cy={341.372} r={6.459} opacity={0.872} />
-      <circle cx={382.934} cy={49.972} r={4.981} opacity={0.584} />
-      <circle cx={15.786} cy={151.697} r={4.931} opacity={0.116} />
-      <circle cx={352.804} cy={716.522} r={8.043} opacity={0.343} />
-      <circle cx={750.202} cy={463.725} r={5.721} opacity={0.448} />
-      <circle cx={190.687} cy={726.527} r={2.891} opacity={0.295} />
-      <circle cx={416.378} cy={287.454} r={8.303} opacity={0.734} />
-      <circle cx={711.208} cy={333.864} r={11.175} opacity={0.328} />
-      <circle cx={547.759} cy={130.303} r={4.941} opacity={0.663} />
-      <circle cx={218.74} cy={547.951} r={7.277} opacity={0.348} />
-      <circle cx={382.194} cy={179.1} r={4.908} opacity={0.748} />
-      <circle cx={432.089} cy={10.946} r={3.242} opacity={0.22} />
-      <circle cx={521.526} cy={75.153} r={4.713} opacity={0.535} />
-      <circle cx={555.27} cy={781.984} r={7.154} opacity={0.16} />
-      <circle cx={412.675} cy={367.295} r={6.78} opacity={0.543} />
-      <circle cx={183.735} cy={640.284} r={5.803} opacity={0.203} />
-      <circle cx={205.769} cy={739.241} r={4.52} opacity={0.479} />
-      <circle cx={664.504} cy={243.927} r={6.152} opacity={0.186} />
-      <circle cx={533.731} cy={777.977} r={3.677} opacity={0.15} />
-      <circle cx={240.445} cy={428.974} r={5.276} opacity={0.822} />
-      <circle cx={346.651} cy={672.676} r={7.288} opacity={0.537} />
-      <circle cx={190.55} cy={522.948} r={5.203} opacity={0.385} />
-      <circle cx={256.59} cy={263.087} r={4.105} opacity={0.961} />
-      <circle cx={393.682} cy={212.129} r={6.678} opacity={0.19} />
-      <circle cx={478.75} cy={217.192} r={5.362} opacity={0.457} />
-      <circle cx={325.62} cy={742.577} r={7.329} opacity={0.538} />
-      <circle cx={366.422} cy={304.939} r={5.472} opacity={0.424} />
-      <circle cx={299.898} cy={575.975} r={3.124} opacity={0.995} />
-      <circle cx={626.291} cy={743.016} r={6.31} opacity={0.27} />
-      <circle cx={753.138} cy={389.9} r={4.392} opacity={0.604} />
-      <circle cx={598.52} cy={687.002} r={7.512} opacity={0.683} />
-      <circle cx={409.899} cy={781.417} r={6.516} opacity={0.643} />
-      <circle cx={170.778} cy={589.261} r={2.729} opacity={0.573} />
-      <circle cx={96.466} cy={251.39} r={5.41} opacity={0.962} />
-      <circle cx={319.303} cy={779.882} r={5.537} opacity={0.217} />
-      <circle cx={767.664} cy={634.018} r={5.748} opacity={0.9} />
-      <circle cx={447.924} cy={405.648} r={8.323} opacity={0.772} />
-      <circle cx={511.782} cy={487.252} r={3.407} opacity={0.123} />
-      <circle cx={306.296} cy={46.043} r={3.667} opacity={0.519} />
-      <circle cx={437.883} cy={592.914} r={7.81} opacity={0.608} />
-      <circle cx={651.101} cy={449.935} r={5.783} opacity={0.249} />
-      <circle cx={619.99} cy={473.892} r={7.374} opacity={0.237} />
-      <circle cx={89.758} cy={160.826} r={3.913} opacity={0.593} />
-      <circle cx={146.534} cy={543.057} r={5.458} opacity={0.497} />
-      <circle cx={315.315} cy={196.886} r={4.578} opacity={0.296} />
-      <circle cx={591.861} cy={112.008} r={2.777} opacity={0.198} />
-      <circle cx={526.467} cy={225.385} r={5.311} opacity={0.439} />
-      <circle cx={776.041} cy={718.619} r={5.866} opacity={0.986} />
-      <circle cx={489.8} cy={81.683} r={4.511} opacity={0.787} />
-      <circle cx={483.703} cy={737.073} r={4.961} opacity={0.676} />
-      <circle cx={62.209} cy={178.649} r={4.356} opacity={0.273} />
-      <circle cx={20.852} cy={495.705} r={7.307} opacity={0.969} />
-      <circle cx={39.547} cy={159.8} r={4.397} opacity={0.762} />
-      <circle cx={317.439} cy={657.651} r={6.608} opacity={0.763} />
-      <circle cx={500.891} cy={187.97} r={8.503} opacity={0.517} />
-      <circle cx={16.443} cy={610.784} r={6.822} opacity={0.117} />
-      <circle cx={651.339} cy={599.676} r={7.662} opacity={0.212} />
-      <circle cx={93.178} cy={575.627} r={5.414} opacity={0.974} />
-      <circle cx={589.849} cy={209.309} r={3.3} opacity={0.572} />
-      <circle cx={258.616} cy={464.58} r={4.82} opacity={0.953} />
-      <circle cx={610.538} cy={642.702} r={3.626} opacity={0.723} />
-      <circle cx={280.518} cy={651.529} r={5.657} opacity={0.24} />
-      <circle cx={749.985} cy={509.924} r={7.609} opacity={0.943} />
-      <circle cx={568.705} cy={367.765} r={7.719} opacity={0.283} />
-      <circle cx={534.43} cy={344.944} r={4.33} opacity={0.389} />
-      <circle cx={243.251} cy={230.442} r={8.065} opacity={0.765} />
-      <circle cx={501.752} cy={540.386} r={5.434} opacity={0.714} />
-      <circle cx={54.578} cy={467.318} r={6.948} opacity={0.256} />
-      <circle cx={502.553} cy={762.318} r={4.083} opacity={0.531} />
-      <circle cx={407.015} cy={612.647} r={8.88} opacity={0.243} />
-      <circle cx={661.617} cy={712.449} r={6.79} opacity={0.202} />
-      <circle cx={67.136} cy={647.052} r={5.722} opacity={0.671} />
-      <circle cx={370.762} cy={112.741} r={8.201} opacity={0.566} />
-      <circle cx={495.294} cy={347.417} r={6.25} opacity={0.157} />
-      <circle cx={586.858} cy={786.003} r={6.724} opacity={0.269} />
-      <circle cx={165.361} cy={374.672} r={3.647} opacity={0.451} />
-      <circle cx={263.383} cy={709.168} r={6.035} opacity={0.983} />
-      <circle cx={514.635} cy={721.773} r={6.424} opacity={0.978} />
-      <circle cx={443.806} cy={250.152} r={4.707} opacity={0.137} />
-      <circle cx={185.961} cy={321.16} r={4.684} opacity={0.978} />
-      <circle cx={514.914} cy={388.466} r={3.208} opacity={0.697} />
-      <circle cx={57.416} cy={518.938} r={5.941} opacity={0.593} />
-      <circle cx={89.225} cy={382.797} r={4.656} opacity={0.933} />
-      <circle cx={587.094} cy={485.522} r={3.366} opacity={0.228} />
-      <circle cx={154.536} cy={130.532} r={4.362} opacity={0.757} />
-      <circle cx={143.847} cy={187.106} r={4.602} opacity={0.603} />
-      <circle cx={176.992} cy={144.834} r={4.46} opacity={0.44} />
-      <circle cx={734.797} cy={723.631} r={6.197} opacity={0.947} />
-      <circle cx={130.269} cy={134.252} r={4.165} opacity={0.234} />
-      <circle cx={480.468} cy={762.137} r={4.582} opacity={0.904} />
-      <circle cx={721.769} cy={748.412} r={5.879} opacity={0.898} />
-      <circle cx={565.891} cy={532.951} r={5.018} opacity={0.304} />
-      <circle cx={429.701} cy={206.628} r={4.166} opacity={0.757} />
-      <circle cx={126.662} cy={671.475} r={6.112} opacity={0.655} />
-      <circle cx={228.369} cy={732.015} r={2.886} opacity={0.782} />
-      <circle cx={785.814} cy={364.247} r={6.824} opacity={0.219} />
-      <circle cx={444.878} cy={121.47} r={5.656} opacity={0.844} />
-      <circle cx={457.611} cy={791.039} r={3.935} opacity={0.91} />
-      <circle cx={189.907} cy={575.753} r={4.584} opacity={0.248} />
-      <circle cx={215.146} cy={23.589} r={9.263} opacity={0.627} />
-      <circle cx={589.109} cy={164.588} r={4.806} opacity={0.393} />
-      <circle cx={40.829} cy={11.001} r={5.209} opacity={0.587} />
-      <circle cx={128.544} cy={740.966} r={10.024} opacity={0.752} />
-      <circle cx={304.089} cy={272.913} r={5.039} opacity={0.363} />
-      <circle cx={161.405} cy={614.206} r={4.693} opacity={0.751} />
-      <circle cx={589.232} cy={190.047} r={3.931} opacity={0.789} />
-      <circle cx={781.577} cy={313.862} r={8.992} opacity={0.843} />
-      <circle cx={621.522} cy={127.599} r={3.785} opacity={0.469} />
-      <circle cx={464.691} cy={493.559} r={5.415} opacity={0.902} />
-      <circle cx={786.542} cy={185.367} r={4.881} opacity={0.315} />
-      <circle cx={345.351} cy={507.43} r={7.609} opacity={0.276} />
-      <circle cx={690.711} cy={409.595} r={7.5} opacity={0.76} />
-      <circle cx={234.401} cy={277.396} r={3.915} opacity={0.798} />
-      <circle cx={692.435} cy={723.967} r={7.241} opacity={0.275} />
-      <circle cx={759.452} cy={157.051} r={5.387} opacity={0.776} />
-      <circle cx={336.181} cy={138.132} r={4.661} opacity={0.306} />
-      <circle cx={371.784} cy={237.086} r={7.054} opacity={0.368} />
-      <circle cx={625.948} cy={325.249} r={5.556} opacity={0.935} />
-      <circle cx={263.115} cy={407.909} r={5.061} opacity={0.398} />
-      <circle cx={25.564} cy={359.254} r={11.339} opacity={0.573} />
-      <circle cx={58.862} cy={778.576} r={7.55} opacity={0.905} />
-      <circle cx={505.111} cy={143.433} r={6.3} opacity={0.77} />
-      <circle cx={783.193} cy={480.527} r={7.119} opacity={0.28} />
-      <circle cx={310.859} cy={364.377} r={8.006} opacity={0.601} />
-      <circle cx={320.262} cy={13.82} r={6.183} opacity={0.539} />
-      <circle cx={350.212} cy={16.762} r={4.975} opacity={0.777} />
-      <circle cx={550.575} cy={165.994} r={4.433} opacity={0.898} />
-      <circle cx={566.518} cy={698.247} r={6.361} opacity={0.731} />
-      <circle cx={551.271} cy={57.169} r={8.763} opacity={0.869} />
-      <circle cx={120.822} cy={532.57} r={3.941} opacity={0.185} />
-      <circle cx={358.648} cy={783.842} r={3.489} opacity={0.176} />
-      <circle cx={375.06} cy={619.869} r={4.8} opacity={0.489} />
-      <circle cx={651.964} cy={777.579} r={7.33} opacity={0.772} />
-      <circle cx={69.535} cy={248.717} r={6.434} opacity={0.231} />
-      <circle cx={72.125} cy={78.773} r={5.575} opacity={0.467} />
-      <circle cx={537.584} cy={202.237} r={5.137} opacity={0.488} />
-      <circle cx={209.381} cy={346.838} r={4.704} opacity={0.82} />
-      <circle cx={290.488} cy={631.179} r={3.665} opacity={0.259} />
-      <circle cx={376.364} cy={763.209} r={6.268} opacity={0.482} />
-      <circle cx={539.804} cy={437.868} r={4.463} opacity={0.871} />
-      <circle cx={680.419} cy={786.125} r={6.325} opacity={0.677} />
-      <circle cx={231.372} cy={518.311} r={5.106} opacity={0.249} />
-      <circle cx={633.744} cy={96.119} r={4.776} opacity={0.663} />
-      <circle cx={217.57} cy={92.972} r={4.302} opacity={0.892} />
-      <circle cx={125.161} cy={459.313} r={5.119} opacity={0.936} />
-      <circle cx={132.823} cy={600.531} r={3.915} opacity={0.348} />
-      <circle cx={751.204} cy={181.107} r={6.758} opacity={0.404} />
-      <circle cx={148.29} cy={445.363} r={6.051} opacity={0.669} />
-      <circle cx={264.513} cy={151.917} r={5.221} opacity={0.19} />
-      <circle cx={92.539} cy={451.767} r={8.106} opacity={0.121} />
-      <circle cx={386.821} cy={450.172} r={4.089} opacity={0.906} />
-      <circle cx={785.931} cy={86.929} r={4.345} opacity={0.428} />
-      <circle cx={344.705} cy={632.311} r={7.613} opacity={0.589} />
-      <circle cx={33.263} cy={789.695} r={4.613} opacity={0.309} />
-      <circle cx={774.407} cy={252.076} r={4.457} opacity={0.853} />
-      <circle cx={56.497} cy={218.73} r={7.255} opacity={0.657} />
-      <circle cx={453.517} cy={65.391} r={3.045} opacity={0.775} />
-      <circle cx={466.248} cy={689.395} r={5.724} opacity={0.773} />
-      <circle cx={59.651} cy={562.364} r={4.181} opacity={0.175} />
-      <circle cx={687.058} cy={623.815} r={7.935} opacity={0.89} />
-      <circle cx={255.367} cy={746.534} r={4.658} opacity={0.855} />
-      <circle cx={270.159} cy={613.466} r={4.186} opacity={0.456} />
-      <circle cx={462.552} cy={98.759} r={5.903} opacity={0.107} />
-      <circle cx={687.546} cy={291.721} r={5.847} opacity={0.292} />
-      <circle cx={325.261} cy={446.315} r={6.724} opacity={0.925} />
-      <circle cx={273.296} cy={315.519} r={4.223} opacity={0.841} />
-      <circle cx={453.908} cy={365.07} r={7.678} opacity={0.123} />
-      <circle cx={469.699} cy={429.629} r={5.756} opacity={0.15} />
-      <circle cx={443.421} cy={85.828} r={4.785} opacity={0.86} />
-      <circle cx={52.676} cy={621.098} r={6.25} opacity={0.228} />
-      <circle cx={451.269} cy={628.758} r={7.251} opacity={0.666} />
-      <circle cx={711.955} cy={693.46} r={6.031} opacity={0.277} />
-      <circle cx={339.817} cy={403.969} r={8.17} opacity={0.365} />
-      <circle cx={234.214} cy={135.514} r={5.026} opacity={0.101} />
-      <circle cx={488.558} cy={396.476} r={4.256} opacity={0.127} />
-      <circle cx={769.521} cy={122.578} r={4.272} opacity={0.741} />
-      <circle cx={148.324} cy={588.044} r={3.469} opacity={0.668} />
-      <circle cx={535.603} cy={487.375} r={5.778} opacity={0.103} />
-      <circle cx={300.189} cy={465.453} r={4.242} opacity={0.821} />
-      <circle cx={36.948} cy={315.388} r={5.624} opacity={0.946} />
-      <circle cx={695.479} cy={456.061} r={7.816} opacity={0.672} />
-      <circle cx={334.31} cy={538.542} r={6.752} opacity={0.297} />
-      <circle cx={584.604} cy={657.884} r={6.46} opacity={0.643} />
-      <circle cx={226.092} cy={705.662} r={4.285} opacity={0.74} />
-      <circle cx={298.503} cy={529.969} r={8.72} opacity={0.543} />
-      <circle cx={504.563} cy={626.428} r={6.818} opacity={0.338} />
-      <circle cx={435.876} cy={451.238} r={5.993} opacity={0.811} />
-      <circle cx={46.92} cy={591.191} r={6.334} opacity={0.679} />
-      <circle cx={450.88} cy={520.412} r={3.694} opacity={0.888} />
-      <circle cx={207.107} cy={469.099} r={3.863} opacity={0.339} />
-      <circle cx={223.025} cy={404.506} r={4.506} opacity={0.866} />
-      <circle cx={594.257} cy={343.594} r={9.111} opacity={0.798} />
-      <circle cx={407.615} cy={706.987} r={6.798} opacity={0.522} />
-      <circle cx={721.4} cy={94.57} r={4.609} opacity={0.636} />
-      <circle cx={786.728} cy={434.222} r={3.693} opacity={0.243} />
-      <circle cx={69.761} cy={335.751} r={7.925} opacity={0.855} />
-      <circle cx={132.66} cy={19.448} r={7.711} opacity={0.246} />
-      <circle cx={18.619} cy={565.064} r={7.216} opacity={0.872} />
-      <circle cx={19.649} cy={239.179} r={10.284} opacity={0.472} />
-      <circle cx={217.254} cy={676.66} r={7.974} opacity={0.228} />
-      <circle cx={200.007} cy={778.301} r={6.365} opacity={0.197} />
-      <circle cx={649.523} cy={75.578} r={4.643} opacity={0.779} />
-      <circle cx={208.555} cy={273.299} r={4.497} opacity={0.958} />
-      <circle cx={677.568} cy={89.749} r={3.245} opacity={0.57} />
-      <circle cx={487.258} cy={314.642} r={5.375} opacity={0.673} />
-      <circle cx={485.151} cy={116.881} r={4.449} opacity={0.773} />
-      <circle cx={370.803} cy={146.887} r={7.762} opacity={0.724} />
-      <circle cx={526.244} cy={165.626} r={3.476} opacity={0.549} />
-      <circle cx={533.339} cy={696.937} r={3.474} opacity={0.282} />
-      <circle cx={118.789} cy={192.061} r={4.305} opacity={0.169} />
-      <circle cx={194.523} cy={616.042} r={3.73} opacity={0.611} />
-      <circle cx={336.746} cy={296.349} r={5.003} opacity={0.802} />
-      <circle cx={13.751} cy={465.375} r={6.189} opacity={0.428} />
-      <circle cx={586.442} cy={300.615} r={5.092} opacity={0.113} />
-      <circle cx={791.164} cy={526.326} r={2.487} opacity={0.266} />
-      <circle cx={14.022} cy={289.139} r={4.395} opacity={0.482} />
-      <circle cx={350.142} cy={573.819} r={3.64} opacity={0.357} />
-      <circle cx={442.444} cy={656.28} r={5.081} opacity={0.745} />
-      <circle cx={770.752} cy={413.564} r={4.557} opacity={0.5} />
-      <circle cx={620.236} cy={709.906} r={4.611} opacity={0.6} />
-      <circle cx={178.849} cy={710.087} r={3.452} opacity={0.368} />
-      <circle cx={91.297} cy={601.262} r={4.443} opacity={0.486} />
-      <circle cx={290.229} cy={688.439} r={4.87} opacity={0.637} />
-      <circle cx={84.406} cy={680.178} r={7.529} opacity={0.531} />
-      <circle cx={109.825} cy={505.022} r={4.191} opacity={0.964} />
-      <circle cx={254.45} cy={666.616} r={7.093} opacity={0.678} />
-      <circle cx={630.911} cy={539.13} r={4.74} opacity={0.919} />
-      <circle cx={405.405} cy={159.342} r={3.067} opacity={0.793} />
-      <circle cx={528.054} cy={513.438} r={4.577} opacity={0.664} />
-      <circle cx={58.861} cy={136.318} r={6.748} opacity={0.568} />
-      <circle cx={10.561} cy={177.409} r={5.081} opacity={0.441} />
-      <circle cx={415.697} cy={182.528} r={4.405} opacity={0.168} />
-      <circle cx={400.551} cy={568.121} r={8.42} opacity={0.413} />
-      <circle cx={693.712} cy={591.676} r={4.462} opacity={0.395} />
-      <circle cx={283.105} cy={287.584} r={4.831} opacity={0.896} />
-      <circle cx={613.134} cy={576.7} r={4.378} opacity={0.997} />
-      <circle cx={125.579} cy={332.634} r={5.425} opacity={0.369} />
-      <circle cx={346.64} cy={264.491} r={6.829} opacity={0.76} />
-      <circle cx={733.767} cy={608.911} r={7.559} opacity={0.604} />
-      <circle cx={701.927} cy={234.801} r={6.501} opacity={0.864} />
-      <circle cx={151.133} cy={782.793} r={5.352} opacity={0.72} />
-      <circle cx={280.754} cy={246.539} r={6.076} opacity={0.974} />
-      <circle cx={574.97} cy={143.779} r={5.012} opacity={0.796} />
-      <circle cx={463.419} cy={273.123} r={8.002} opacity={0.154} />
-      <circle cx={14.885} cy={23.383} r={5.125} opacity={0.563} />
-      <circle cx={152.283} cy={289.158} r={7.004} opacity={0.887} />
-      <circle cx={388.973} cy={734.183} r={6.248} opacity={0.385} />
-      <circle cx={367.936} cy={554.697} r={4.966} opacity={0.738} />
-      <circle cx={49.228} cy={747.412} r={4.443} opacity={0.103} />
-      <circle cx={736.07} cy={128.083} r={4.846} opacity={0.213} />
-      <circle cx={306.249} cy={112.447} r={6.005} opacity={0.304} />
-      <circle cx={656.081} cy={191.24} r={5.148} opacity={0.616} />
-      <circle cx={474.032} cy={534.434} r={6.606} opacity={0.801} />
-      <circle cx={679.317} cy={45.67} r={5.441} opacity={0.524} />
-      <circle cx={224.781} cy={69.934} r={3.813} opacity={0.399} />
-      <circle cx={281.513} cy={215.558} r={6.647} opacity={0.346} />
-      <circle cx={444.2} cy={317.869} r={6.006} opacity={0.219} />
-      <circle cx={351.901} cy={366.049} r={6.719} opacity={0.847} />
-      <circle cx={216.562} cy={245.483} r={6.046} opacity={0.202} />
-      <circle cx={499.864} cy={275.925} r={10.292} opacity={0.867} />
-      <circle cx={34.265} cy={441.5} r={4.612} opacity={0.858} />
-      <circle cx={65.368} cy={409.352} r={8.762} opacity={0.286} />
-      <circle cx={18.644} cy={77.152} r={6.791} opacity={0.924} />
-      <circle cx={177.332} cy={251.701} r={8.402} opacity={0.897} />
-      <circle cx={574.74} cy={757.264} r={5.381} opacity={0.732} />
-      <circle cx={611.98} cy={178.055} r={4.67} opacity={0.298} />
-      <circle cx={99.687} cy={652.657} r={5.193} opacity={0.564} />
-      <circle cx={364.068} cy={595.221} r={3.494} opacity={0.641} />
-      <circle cx={671.878} cy={518.593} r={4.925} opacity={0.682} />
-      <circle cx={696.763} cy={122.86} r={4.509} opacity={0.15} />
-      <circle cx={634.987} cy={416.546} r={5.575} opacity={0.514} />
-      <circle cx={326.447} cy={602.416} r={4.096} opacity={0.518} />
-      <circle cx={210.566} cy={118.735} r={4.826} opacity={0.258} />
-      <circle cx={153.467} cy={669.566} r={5.773} opacity={0.791} />
-      <circle cx={37.373} cy={52.517} r={8.283} opacity={0.529} />
-      <circle cx={79.986} cy={737.411} r={5.679} opacity={0.114} />
-      <circle cx={619.022} cy={610.866} r={6.898} opacity={0.313} />
-      <circle cx={280.212} cy={127.48} r={5.879} opacity={0.135} />
-      <circle cx={472.545} cy={161.529} r={8.087} opacity={0.444} />
-      <circle cx={278.096} cy={443.395} r={6.638} opacity={0.739} />
-      <circle cx={783.821} cy={279.199} r={3.969} opacity={0.319} />
-      <circle cx={173.861} cy={407.13} r={6.312} opacity={0.763} />
-      <circle cx={307.248} cy={310.708} r={7.277} opacity={0.342} />
-      <circle cx={154.513} cy={98.44} r={6.002} opacity={0.687} />
-      <circle cx={165.356} cy={493.059} r={3.537} opacity={0.821} />
-      <circle cx={371.637} cy={647.737} r={3.51} opacity={0.663} />
-      <circle cx={520.739} cy={110.898} r={7.543} opacity={0.238} />
-      <circle cx={12.819} cy={753.901} r={3.608} opacity={0.802} />
-      <circle cx={170.269} cy={175.707} r={4.865} opacity={0.404} />
-      <circle cx={491.14} cy={472.348} r={3.844} opacity={0.526} />
-      <circle cx={412.443} cy={415.103} r={4.829} opacity={0.212} />
-      <circle cx={773.642} cy={582.052} r={8.984} opacity={0.89} />
-      <circle cx={272.249} cy={182.305} r={7.633} opacity={0.578} />
-      <circle cx={476.256} cy={7.309} r={2.97} opacity={0.749} />
-      <circle cx={315.269} cy={245.586} r={5.333} opacity={0.63} />
-      <circle cx={546.907} cy={272.58} r={5.397} opacity={0.306} />
-      <circle cx={203.559} cy={150.218} r={7.439} opacity={0.9} />
-      <circle cx={141.201} cy={161.472} r={5.328} opacity={0.799} />
-      <circle cx={625.293} cy={245.206} r={5.564} opacity={0.604} />
-      <circle cx={658.594} cy={486.457} r={7.271} opacity={0.797} />
-      <circle cx={556.527} cy={325.618} r={5.323} opacity={0.83} />
-      <circle cx={331.45} cy={575.129} r={3.66} opacity={0.521} />
-      <circle cx={234.121} cy={785.742} r={5.842} opacity={0.338} />
-      <circle cx={255.191} cy={104.628} r={4.428} opacity={0.818} />
-      <circle cx={216.615} cy={205.555} r={3.876} opacity={0.838} />
-      <circle cx={503.888} cy={689.367} r={5.663} opacity={0.548} />
-      <circle cx={525.838} cy={749.731} r={5.679} opacity={0.891} />
-      <circle cx={490.722} cy={787.732} r={4.302} opacity={0.147} />
-      <circle cx={102.449} cy={132.505} r={7.297} opacity={0.503} />
-      <circle cx={171.987} cy={752.872} r={5.105} opacity={0.673} />
-      <circle cx={442.28} cy={157.923} r={4.981} opacity={0.927} />
-      <circle cx={442.919} cy={712} r={4.418} opacity={0.527} />
-      <circle cx={533.772} cy={539.457} r={5.085} opacity={0.925} />
-      <circle cx={574.055} cy={92.677} r={6.364} opacity={0.99} />
-      <circle cx={516.414} cy={788.732} r={3.905} opacity={0.625} />
-      <circle cx={214.996} cy={299.965} r={3.77} opacity={0.887} />
-      <circle cx={662.628} cy={346.841} r={5.092} opacity={0.713} />
-      <circle cx={483.847} cy={713.086} r={5.243} opacity={0.423} />
-      <circle cx={175.658} cy={446.291} r={4.155} opacity={0.239} />
-      <circle cx={728.143} cy={539.169} r={7.959} opacity={0.844} />
-      <circle cx={341.139} cy={44.305} r={4.844} opacity={0.502} />
-      <circle cx={533.864} cy={300.415} r={5.503} opacity={0.743} />
-      <circle cx={430.685} cy={685.016} r={5.917} opacity={0.528} />
-      <circle cx={467.888} cy={459.904} r={4.805} opacity={0.816} />
-      <circle cx={247.527} cy={564.853} r={5.9} opacity={0.736} />
-      <circle cx={632.158} cy={157.081} r={6.704} opacity={0.697} />
-      <circle cx={89.347} cy={14.274} r={4.925} opacity={0.901} />
-      <circle cx={394.864} cy={649.117} r={2.843} opacity={0.489} />
-      <circle cx={603.881} cy={78.861} r={8.024} opacity={0.689} />
-      <circle cx={588.616} cy={396.392} r={5.108} opacity={0.914} />
-      <circle cx={404.49} cy={19.051} r={3.894} opacity={0.193} />
-      <circle cx={532.185} cy={669.956} r={4.691} opacity={0.341} />
-      <circle cx={417.175} cy={527.804} r={5.841} opacity={0.453} />
-      <circle cx={550.753} cy={394.895} r={4.874} opacity={0.176} />
-      <circle cx={714.912} cy={19.91} r={9.439} opacity={0.709} />
-      <circle cx={247.501} cy={198.413} r={4.799} opacity={0.504} />
-      <circle cx={550.19} cy={95.492} r={3.752} opacity={0.671} />
-      <circle cx={286.286} cy={81.783} r={6.315} opacity={0.714} />
-      <circle cx={399.258} cy={341.578} r={4.318} opacity={0.731} />
-      <circle cx={411.191} cy={137.557} r={3.384} opacity={0.653} />
-      <circle cx={626.457} cy={662.905} r={5.897} opacity={0.239} />
-      <circle cx={761.851} cy={767.495} r={5.624} opacity={0.741} />
-      <circle cx={505.495} cy={15.153} r={4.355} opacity={0.264} />
-      <circle cx={669.501} cy={112.674} r={5.87} opacity={0.975} />
-      <circle cx={183.012} cy={674.723} r={7.69} opacity={0.129} />
-      <circle cx={518.743} cy={650.567} r={4.379} opacity={0.658} />
-      <circle cx={551.073} cy={467.132} r={5.384} opacity={0.448} />
-      <circle cx={680.534} cy={677.545} r={5.053} opacity={0.228} />
-      <circle cx={13.886} cy={685.542} r={6.632} opacity={0.914} />
-      <circle cx={440.372} cy={773.551} r={4.694} opacity={0.251} />
-      <circle cx={180.746} cy={216.857} r={8.09} opacity={0.149} />
-      <circle cx={135.255} cy={622.191} r={4.226} opacity={0.171} />
-      <circle cx={742.604} cy={785.102} r={5.98} opacity={0.816} />
-      <circle cx={656.431} cy={308.137} r={4.89} opacity={0.565} />
-      <circle cx={611.021} cy={422.208} r={6.164} opacity={0.629} />
-      <circle cx={275.493} cy={782.754} r={7.192} opacity={0.392} />
-      <circle cx={317.021} cy={703.513} r={7.874} opacity={0.689} />
-      <circle cx={114.924} cy={160.276} r={3.29} opacity={0.887} />
-      <circle cx={329.772} cy={334.334} r={5.818} opacity={0.906} />
-      <circle cx={15.054} cy={129.028} r={3.583} opacity={0.569} />
-      <circle cx={184.453} cy={107.27} r={4.144} opacity={0.258} />
-      <circle cx={522.738} cy={461.039} r={5.682} opacity={0.573} />
-      <circle cx={199.486} cy={182.199} r={5.81} opacity={0.11} />
-      <circle cx={788.204} cy={766.8} r={5.122} opacity={0.37} />
-      <circle cx={122.253} cy={60.505} r={4.242} opacity={0.868} />
-      <circle cx={355.748} cy={469.765} r={8.411} opacity={0.909} />
-      <circle cx={668.679} cy={745.895} r={5.267} opacity={0.88} />
-      <circle cx={352.795} cy={186.321} r={6.173} opacity={0.187} />
-      <circle cx={568.26} cy={427.343} r={5.468} opacity={0.813} />
-      <circle cx={580.406} cy={15.506} r={4.63} opacity={0.967} />
-      <circle cx={14.176} cy={726.426} r={6.484} opacity={0.801} />
-      <circle cx={670.903} cy={161.724} r={6.512} opacity={0.936} />
-      <circle cx={269.026} cy={62.238} r={3.485} opacity={0.45} />
-      <circle cx={770.209} cy={537.372} r={6.332} opacity={0.134} />
-      <circle cx={321.321} cy={491.786} r={4.259} opacity={0.954} />
-      <circle cx={116.828} cy={591.66} r={4.562} opacity={0.852} />
-      <circle cx={712.158} cy={788.361} r={3.324} opacity={0.13} />
-      <circle cx={75.553} cy={113.745} r={3.9} opacity={0.289} />
-      <circle cx={174.003} cy={64.877} r={8.731} opacity={0.317} />
-      <circle cx={304.714} cy={161.708} r={5.293} opacity={0.26} />
-      <circle cx={89.282} cy={542.477} r={5.713} opacity={0.231} />
-      <circle cx={568.72} cy={568.754} r={6.951} opacity={0.374} />
-      <circle cx={753.583} cy={345.322} r={7.497} opacity={0.552} />
-      <circle cx={499.444} cy={236.329} r={5.304} opacity={0.107} />
-      <circle cx={594.777} cy={447.311} r={4.318} opacity={0.588} />
-      <circle cx={90.304} cy={191.86} r={4.186} opacity={0.84} />
-      <circle cx={695.111} cy={190.705} r={5.355} opacity={0.184} />
-      <circle cx={477.71} cy={564.423} r={3.724} opacity={0.902} />
-      <circle cx={132.19} cy={374.714} r={7.554} opacity={0.26} />
-      <circle cx={715.551} cy={156.207} r={5.174} opacity={0.719} />
-      <circle cx={219.54} cy={641.956} r={5.605} opacity={0.74} />
-      <circle cx={411.212} cy={246.123} r={7.506} opacity={0.174} />
-      <circle cx={483.775} cy={659.586} r={5.831} opacity={0.881} />
-      <circle cx={647.497} cy={685.989} r={5.333} opacity={0.505} />
-      <circle cx={150.417} cy={702.714} r={5.683} opacity={0.15} />
-      <circle cx={42.159} cy={696.119} r={5.401} opacity={0.928} />
-      <circle cx={413.884} cy={657.702} r={5.642} opacity={0.379} />
-      <circle cx={386.825} cy={674.678} r={3.667} opacity={0.205} />
-      <circle cx={455.513} cy={206.74} r={5.506} opacity={0.585} />
-      <circle cx={546.982} cy={727.351} r={4.93} opacity={0.875} />
-      <circle cx={752.577} cy={83.741} r={6.365} opacity={0.272} />
-      <circle cx={749.262} cy={682.249} r={8.273} opacity={0.822} />
-      <circle cx={277.758} cy={570.861} r={3.68} opacity={0.682} />
-      <circle cx={43.254} cy={719.726} r={2.974} opacity={0.931} />
-      <circle cx={113.365} cy={702.317} r={8.363} opacity={0.66} />
-      <circle cx={578.785} cy={601.23} r={6.663} opacity={0.183} />
-      <circle cx={528.039} cy={566.041} r={5.54} opacity={0.872} />
-      <circle cx={387.262} cy={493.2} r={6.447} opacity={0.657} />
-      <circle cx={62.32} cy={26.605} r={6.194} opacity={0.615} />
-      <circle cx={182.949} cy={551.665} r={3.242} opacity={0.381} />
-      <circle cx={202.178} cy={386.278} r={3.751} opacity={0.631} />
-      <circle cx={8.731} cy={787.087} r={3.271} opacity={0.109} />
-      <circle cx={771.792} cy={221.173} r={5.08} opacity={0.885} />
-      <circle cx={8.787} cy={416.334} r={4.698} opacity={0.926} />
-      <circle cx={664.093} cy={558.196} r={8.438} opacity={0.728} />
-      <circle cx={388.079} cy={84.16} r={5.374} opacity={0.967} />
-      <circle cx={291.965} cy={18.977} r={6.48} opacity={0.811} />
-      <circle cx={593.94} cy={268.912} r={5.829} opacity={0.646} />
-      <circle cx={769.712} cy={31.002} r={8.245} opacity={0.799} />
-      <circle cx={423.734} cy={746.918} r={3.957} opacity={0.548} />
-      <circle cx={655.734} cy={644.901} r={4.987} opacity={0.384} />
-      <circle cx={174.349} cy={23.938} r={6.377} opacity={0.385} />
-      <circle cx={562.373} cy={502.742} r={6.853} opacity={0.352} />
-      <circle cx={447.98} cy={24.333} r={3.915} opacity={0.321} />
-      <circle cx={680.76} cy={371.921} r={4.722} opacity={0.563} />
-      <circle cx={123.381} cy={565.225} r={6.79} opacity={0.768} />
-      <circle cx={618.954} cy={201.277} r={3.857} opacity={0.525} />
-      <circle cx={743.686} cy={299.197} r={6.634} opacity={0.86} />
-      <circle cx={233.88} cy={167.718} r={6.107} opacity={0.344} />
-      <circle cx={583.582} cy={728.59} r={4.423} opacity={0.903} />
-      <circle cx={532.99} cy={25.402} r={8.588} opacity={0.365} />
-      <circle cx={186.33} cy={289.369} r={6.633} opacity={0.741} />
-      <circle cx={719.561} cy={378.451} r={9.071} opacity={0.382} />
-      <circle cx={713.533} cy={62.584} r={5.466} opacity={0.949} />
-      <circle cx={608.542} cy={509.799} r={5.756} opacity={0.4} />
-      <circle cx={375.845} cy={695.124} r={4.9} opacity={0.171} />
-      <circle cx={726.955} cy={427.126} r={8.296} opacity={0.523} />
-      <circle cx={379.613} cy={524.602} r={6.95} opacity={0.518} />
-      <circle cx={462.683} cy={764.149} r={4.109} opacity={0.983} />
-      <circle cx={377.082} cy={17.264} r={4.945} opacity={0.161} />
-      <circle cx={141.791} cy={411.733} r={7.582} opacity={0.332} />
-      <circle cx={155.695} cy={338.135} r={6.583} opacity={0.429} />
-      <circle cx={83.429} cy={622.041} r={5.157} opacity={0.35} />
-      <circle cx={82.136} cy={489.788} r={6.089} opacity={0.928} />
-      <circle cx={713.212} cy={493.937} r={5.975} opacity={0.715} />
-      <circle cx={95.891} cy={353.788} r={4.957} opacity={0.153} />
-      <circle cx={52.333} cy={670.316} r={3.924} opacity={0.882} />
-      <circle cx={449.597} cy={735.606} r={3.385} opacity={0.386} />
-      <circle cx={423.526} cy={46.844} r={4.292} opacity={0.151} />
-      <circle cx={408.699} cy={112.496} r={5.971} opacity={0.804} />
-      <circle cx={364.997} cy={334.688} r={6.813} opacity={0.232} />
-      <circle cx={48.517} cy={270.992} r={8.148} opacity={0.812} />
-      <circle cx={565.97} cy={182.457} r={6.11} opacity={0.802} />
-      <circle cx={626.837} cy={374.672} r={5.667} opacity={0.63} />
-      <circle cx={416.81} cy={78.845} r={6.08} opacity={0.481} />
-      <circle cx={536.111} cy={247.703} r={4.254} opacity={0.673} />
-      <circle cx={81.021} cy={291.196} r={8.455} opacity={0.11} />
-      <circle cx={150.132} cy={515.365} r={3.347} opacity={0.762} />
-      <circle cx={652.469} cy={130.612} r={4.313} opacity={0.778} />
-      <circle cx={617.564} cy={778.964} r={4.998} opacity={0.349} />
-      <circle cx={240.199} cy={49.274} r={5.197} opacity={0.119} />
-      <circle cx={190.182} cy={487.034} r={5.298} opacity={0.535} />
-      <circle cx={297.335} cy={603.755} r={3.458} opacity={0.451} />
-      <circle cx={270.406} cy={546.823} r={5.206} opacity={0.729} />
-      <circle cx={641.597} cy={55.01} r={3.382} opacity={0.233} />
-      <circle cx={266.878} cy={35.798} r={5.483} opacity={0.448} />
-      <circle cx={128.753} cy={85.908} r={5.269} opacity={0.174} />
-      <circle cx={242.556} cy={616.254} r={7.099} opacity={0.527} />
-      <circle cx={676.527} cy={69.268} r={2.48} opacity={0.308} />
-      <circle cx={632.775} cy={277.96} r={7.091} opacity={0.9} />
-      <circle cx={535.836} cy={627.967} r={5.138} opacity={0.222} />
-      <circle cx={286.85} cy={743.431} r={6.939} opacity={0.17} />
-      <circle cx={709.073} cy={561.763} r={7.103} opacity={0.269} />
-      <circle cx={358.161} cy={74.389} r={4.011} opacity={0.382} />
-      <circle cx={266.314} cy={511.164} r={5.251} opacity={0.94} />
-      <circle cx={397.544} cy={313.625} r={5.264} opacity={0.63} />
-      <circle cx={621.986} cy={29.753} r={4.889} opacity={0.977} />
-      <circle cx={123.089} cy={266.77} r={5.855} opacity={0.908} />
-      <circle cx={254.87} cy={295.853} r={4.946} opacity={0.136} />
-      <circle cx={156.227} cy={564.15} r={4.253} opacity={0.805} />
-      <circle cx={314.636} cy={625.485} r={4.917} opacity={0.797} />
-      <circle cx={224.276} cy={581.383} r={6.087} opacity={0.745} />
-      <circle cx={24.3} cy={768.555} r={2.965} opacity={0.523} />
-      <circle cx={660.129} cy={409.512} r={4.817} opacity={0.692} />
-      <circle cx={95.866} cy={43.826} r={3.842} opacity={0.92} />
-      <circle cx={568.369} cy={245.157} r={4.507} opacity={0.307} />
-      <circle cx={380.889} cy={392.62} r={8.154} opacity={0.886} />
-      <circle cx={726.128} cy={265.555} r={6.893} opacity={0.195} />
-      <circle cx={523.723} cy={368.922} r={4.603} opacity={0.768} />
-      <circle cx={230.275} cy={315.933} r={4.396} opacity={0.722} />
-      <circle cx={482.997} cy={612.447} r={5.747} opacity={0.799} />
-      <circle cx={644.741} cy={208.645} r={4.207} opacity={0.481} />
-      <circle cx={429.829} cy={491.453} r={7.44} opacity={0.797} />
-      <circle cx={20.169} cy={528.358} r={6.591} opacity={0.437} />
-      <circle cx={313.969} cy={562.201} r={4.447} opacity={0.747} />
-      <circle cx={548.321} cy={601.411} r={4.796} opacity={0.837} />
-      <circle cx={439.825} cy={556.5} r={6.558} opacity={0.345} />
-      <circle cx={365.222} cy={430.709} r={5.978} opacity={0.252} />
-      <circle cx={151.423} cy={211.585} r={5.948} opacity={0.97} />
-      <circle cx={82.209} cy={710.374} r={3.606} opacity={0.781} />
-      <circle cx={514.916} cy={591.033} r={6.56} opacity={0.248} />
-      <circle cx={256.478} cy={11.849} r={5.56} opacity={0.572} />
-      <circle cx={590.433} cy={625.668} r={4.105} opacity={0.244} />
-      <circle cx={98.697} cy={777.731} r={9.432} opacity={0.72} />
-      <circle cx={732.474} cy={208.1} r={7.968} opacity={0.487} />
-      <circle cx={320.137} cy={68.849} r={3.087} opacity={0.952} />
-      <circle cx={564.652} cy={211.991} r={5.472} opacity={0.172} />
-      <circle cx={493.312} cy={506.628} r={7.053} opacity={0.491} />
-      <circle cx={595.342} cy={234.475} r={7.181} opacity={0.772} />
-      <circle cx={239.563} cy={487.641} r={4.768} opacity={0.442} />
-      <circle cx={474.878} cy={25.267} r={3.309} opacity={0.134} />
-      <circle cx={93.655} cy={218.602} r={5.826} opacity={0.437} />
-      <circle cx={110.116} cy={104.426} r={5.735} opacity={0.595} />
-      <circle cx={108.513} cy={417.356} r={7.113} opacity={0.253} />
-      <circle cx={528.274} cy={413.674} r={6.218} opacity={0.234} />
-      <circle cx={31.1} cy={401.424} r={7.138} opacity={0.617} />
-      <circle cx={270.987} cy={589.684} r={2.822} opacity={0.523} />
-      <circle cx={586.874} cy={49.649} r={6.539} opacity={0.394} />
-      <circle cx={202.721} cy={430.745} r={4.16} opacity={0.134} />
-      <circle cx={461.786} cy={45.611} r={3.525} opacity={0.143} />
-      <circle cx={572.515} cy={463.344} r={4.273} opacity={0.286} />
-      <circle cx={600.452} cy={134.74} r={3.514} opacity={0.861} />
-      <circle cx={25.475} cy={199.484} r={4.639} opacity={0.353} />
-      <circle cx={493.148} cy={50.935} r={4.287} opacity={0.708} />
-    </g>
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <g
+    fill="none"
+    stroke="hsl(193, 82%, 31%)"
+    strokeLinecap="round"
+    strokeWidth={3}
+  >
+    <path d="M52 400h696" opacity={0.59} />
+    <path d="m592.53 413.463-385.06-26.926" opacity={0.27} />
+    <path d="m318.798 388.588 162.404 22.824" opacity={0.96} />
+    <path d="m573.132 436.8-346.264-73.6" opacity={0.52} />
+    <path d="m375.968 393.11 48.064 13.78" opacity={0.39} />
+    <path d="m127.959 300.985 544.082 198.03" opacity={0.69} />
+    <path d="m484.96 437.827-169.92-75.654" opacity={0.92} />
+    <path d="m478.14 441.548-156.28-83.096" opacity={0.75} />
+    <path d="m378.799 386.752 42.402 26.496" opacity={0.18} />
+    <path d="m217.567 267.454 364.866 265.092" opacity={0.24} />
+    <path d="m156.398 195.594 487.204 408.812" opacity={0.73} />
+    <path d="m391.368 391.664 17.264 16.672" opacity={0.45} />
+    <path d="m388.625 387.367 22.75 25.266" opacity={0.26} />
+    <path d="M536.369 574.544 263.631 225.456" opacity={0.84} />
+    <path d="M451.166 475.857 348.834 324.143" opacity={0.61} />
+    <path d="m231.25 107.716 337.5 584.568" opacity={0.84} />
+    <path d="m241.967 75.985 316.066 648.03" opacity={0.6} />
+    <path d="m271.135 81.049 257.73 637.902" opacity={0.32} />
+    <path d="m411.897 436.616-23.794-73.232" opacity={0.98} />
+    <path d="m409.435 437.842-18.87-75.684" opacity={0.76} />
+    <path d="m345.3 89.786 109.4 620.428" opacity={0.89} />
+    <path d="m391.742 321.433 16.516 157.134" opacity={0.49} />
+    <path d="M410.819 709.811 389.18 90.19" opacity={0.33} />
+    <path d="m404.956 258.087-9.912 283.826" opacity={0.98} />
+    <path d="m404.338 358.727-8.676 82.546" opacity={0.19} />
+    <path
+      d="m382.462 499.466 35.076-198.932M369.76 521.287l60.48-242.574"
+      opacity={0.17}
+    />
+    <path d="M497.804 98.99 302.196 701.01" opacity={0.11} />
+    <path d="m337.628 554.376 124.744-308.752" opacity={0.69} />
+    <path d="m280.982 644.023 238.036-488.046" opacity={0.29} />
+    <path d="M562 119.408 238 680.592" opacity={0.54} />
+    <path d="m212.39 678.142 375.22-556.284" opacity={0.19} />
+    <path d="m474.187 305.045-148.374 189.91" />
+    <path d="m519.105 267.72-238.21 264.56" opacity={0.78} />
+    <path d="M504.664 298.927 295.336 501.073" opacity={0.62} />
+    <path d="m322.246 465.243 155.508-130.486" opacity={0.86} />
+    <path d="m387.056 409.405 25.888-18.81" opacity={0.65} />
+    <path d="m435.618 377.743-71.236 44.514" opacity={0.12} />
+    <path d="m263.143 472.768 273.714-145.536" opacity={0.75} />
+    <path d="m638.435 293.842-476.87 212.316" opacity={0.08} />
+    <path d="M190.449 476.27 609.55 323.73" opacity={0.93} />
+    <path d="m96.722 486.964 606.556-173.928" opacity={0.07} />
+    <path d="m290.447 423.286 219.106-46.572" opacity={0.82} />
+    <path d="m424.757 396.52-49.514 6.96" opacity={0.68} />
+    <path d="m523.2 391.385-246.4 17.23" opacity={0.75} />
+    <path d="M403.5 400h-7" opacity={0.78} />
+    <path d="m277.798 391.455 244.404 17.09" opacity={0.93} />
+    <path d="m191.549 370.704 416.902 58.592" opacity={0.7} />
+    <path d="m89.927 334.092 620.146 131.816" opacity={0.67} />
+    <path d="m267.346 361.962 265.308 76.076" opacity={0.31} />
+    <path d="m361.003 385.806 77.994 28.388" opacity={0.39} />
+    <path d="m413.703 406.101-27.406-12.202" opacity={0.23} />
+    <path d="m530.235 469.247-260.47-138.494" opacity={0.57} />
+    <path d="M688.76 580.438 111.24 219.562" opacity={0.44} />
+    <path d="m681.538 604.55-563.076-409.1" opacity={0.79} />
+    <path d="m269.39 290.405 261.22 219.19" opacity={0.89} />
+    <path d="m401.798 401.737-3.596-3.474" opacity={0.12} />
+    <path d="M494.013 504.412 305.987 295.588" opacity={0.9} />
+    <path d="M559.764 604.489 240.236 195.51" opacity={0.4} />
+    <path d="M561.886 640.006 238.114 159.994" opacity={0.84} />
+    <path d="m445.5 478.808-91-157.616" opacity={0.88} />
+    <path d="M558.69 725.363 241.31 74.637" opacity={0.41} />
+    <path d="m495.525 636.432-191.05-472.864" opacity={0.95} />
+    <path d="m445.58 540.28-91.16-280.56" opacity={0.77} />
+    <path d="M476.084 705.158 323.916 94.842" opacity={0.84} />
+    <path d="m383.677 307.428 32.646 185.144" opacity={0.16} />
+    <path d="m374.756 159.823 50.488 480.354" opacity={0.08} />
+    <path d="m391.764 164.144 16.472 471.712" opacity={0.45} />
+    <path d="m390.926 659.842 18.148-519.684" opacity={0.8} />
+    <path d="m375.802 630.232 48.396-460.464" opacity={0.66} />
+    <path d="M410.072 342.881 389.928 457.12" opacity={0.46} />
+    <path d="m413.548 345.663-27.096 108.674" opacity={0.57} />
+    <path d="m401.082 396.671-2.164 6.658" opacity={0.59} />
+    <path d="m409.927 375.43-19.854 49.14" opacity={0.49} />
+    <path d="m246.35 715.027 307.3-630.054" opacity={0.76} />
+    <path d="M565.25 113.779 234.75 686.22" opacity={0.62} />
+    <path d="m284.527 571.196 230.946-342.392" opacity={0.83} />
+    <path d="M322.119 499.683 477.88 300.317" opacity={0.46} />
+    <path d="m273.2 540.826 253.6-281.652" opacity={0.62} />
+    <path d="m196.067 596.936 407.866-393.872" opacity={0.51} />
+    <path d="m220.746 550.412 358.508-300.824" opacity={0.1} />
+    <path
+      d="m346.605 438.794 106.79-77.588M631.517 255.332 168.483 544.668"
+      opacity={0.62}
+    />
+    <path d="M615.88 285.214 184.12 514.786" opacity={0.9} />
+    <path d="M179.379 498.227 620.62 301.773" opacity={0.54} />
+    <path d="m224.277 463.958 351.446-127.916" opacity={0.65} />
+    <path d="m319.735 423.016 160.53-46.032" opacity={0.96} />
+    <path d="m414.672 396.881-29.344 6.238" opacity={0.76} />
+  </g>
+</svg>
 )
 export default HeroSVG;
