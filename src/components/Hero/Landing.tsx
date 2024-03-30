@@ -9,7 +9,7 @@ import { roboto } from "../../../public/Assets/Fonts";
 
 const Landing = () => {
   return (
-    <div className="text-center bg-cyan-700 overflow-hidden">
+    <div className="text-center bg-cyan-700 overflow-hidden" id="Landing">
       <div className="overflow-hidden relative shadow-2xl bg-cyan-700 contain-w">
         <div className="absolute size-full opacity-50">
           <LandingSVG />

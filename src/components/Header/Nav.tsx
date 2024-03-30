@@ -10,16 +10,18 @@ type navProps = {
 };
 
 const Nav = ({ setShowNav }: prop) => {
+  const scrollToSection = (page: string) => {
+    setShowNav(false);
+    document.getElementById(page)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const NavLink = ({ page }: navProps) => {
     return (
-      <div className="px-4 py-2 text-center hover:bg-cyan-700 md:rounded hover:text-white uppercase hover:shadow-sm hover:shadow-black">
-        <Link
-          href={`#${page}`}
-          className="p-2"
-          onClick={() => setShowNav(false)}
-        >
-          {page}
-        </Link>
+      <div
+        className="px-4 py-2 text-center hover:bg-cyan-700 md:rounded hover:text-white uppercase hover:shadow-sm hover:shadow-black cursor-pointer"
+        onClick={() => scrollToSection(page)}
+      >
+        <p>{page}</p>
       </div>
     );
   };

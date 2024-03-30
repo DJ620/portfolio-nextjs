@@ -4,17 +4,34 @@ import Nav from "./Nav";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
+
+  const scrollToTop = () => {
+    // document.getElementById("Landing")?.scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header className="relative w-full px-2 h-14 py-1 bg-white border-b bg-opacity-90 border-slate-100 md:px-5">
       <div className="flex justify-between contain-w">
         <div className="flex items-center">
-          <a href="#" className="px-2 py-1 text-3xl font-extrabold text-white rounded-full bg-cyan-700 text-shadow-sm shadow-black">
+          <p
+            className="px-2 py-1 text-3xl font-extrabold text-white rounded-full bg-cyan-700 text-shadow-sm shadow-black cursor-pointer"
+            onClick={() => scrollToTop()}
+          >
             DJ
-          </a>
+          </p>
         </div>
         <div className="absolute right-2 sm:right-4 top-2 md:hidden">
           <label className="burger">
-            <input type="checkbox" id="burger" checked={showNav} onChange={() => setShowNav(!showNav)}/>
+            <input
+              type="checkbox"
+              id="burger"
+              checked={showNav}
+              onChange={() => setShowNav(!showNav)}
+            />
             <span></span>
             <span></span>
             <span></span>
