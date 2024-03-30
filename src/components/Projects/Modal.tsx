@@ -23,7 +23,7 @@ const Modal = ({ project }: props) => {
             <Image
               src={project.image}
               alt={project.name}
-              className="rounded-lg h-80 w-auto mx-auto md:mx-0 md:w-[50vw] max-w-[700px] md:h-auto md:rounded-none"
+              className="rounded-lg h-80 w-auto mx-auto md:mx-0 md:w-[50vw] max-w-[550px] md:h-auto md:rounded-none"
             />
             <div className="px-4 md:w-[46vw] max-w-[700px]">
               <h1 className="text-3xl text-center text-cyan-700 font-semibold mb-2 md:mb-8">
