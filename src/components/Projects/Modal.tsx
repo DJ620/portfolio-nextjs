@@ -19,11 +19,11 @@ const Modal = ({ project }: props) => {
     <>
       <dialog id="my_modal_2" className="modal">
         <div className="bg-white modal-box max-h-[90vh] overflow-hidden pb-0 md:max-w-[98vw] lg:max-w-[1100px] min-w-0 px-0 md:pt-0">
-          <div className="md:flex md:justify-between max-h-[80vh] md:max-h-full overflow-scroll  md:items-center px-5 md:px-0">
+          <div className="flex flex-col md:flex-row mx-auto md:justify-between max-h-[75vh] md:max-h-full overflow-scroll  md:items-center px-5 md:px-0">
             <Image
               src={project.image}
               alt={project.name}
-              className="rounded-lg h-96 w-auto mx-auto md:mx-0 md:w-[50vw] max-w-[700px] md:h-auto md:rounded-none"
+              className="rounded-lg h-80 w-auto mx-auto md:mx-0 md:w-[50vw] max-w-[700px] md:h-auto md:rounded-none"
             />
             <div className="px-4 md:w-[46vw] max-w-[700px]">
               <h1 className="text-3xl text-center text-cyan-700 font-semibold mb-2 md:mb-8">
