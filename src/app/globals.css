@@ -110,3 +110,7 @@ html {
     margin-top: 0px;
   }
 }
+
+.landing {
+  animation: reveal 0.75s;
+}

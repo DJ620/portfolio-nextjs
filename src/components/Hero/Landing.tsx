@@ -14,11 +14,11 @@ const Landing = () => {
         <div className="absolute size-full opacity-50">
           <LandingSVG />
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.75 }}
-          className={`md:flex md:flex-row-reverse`}
+        <div
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ duration: 0.75 }}
+          className={`md:flex md:flex-row-reverse landing`}
         >
           <div className="mx-auto relative my-5 md:flex md:flex-col md:items-center md:justify-center">
             <p className="font-extrabold text-white text-7xl lg:text-8xl 2xl:text-9xl">
@@ -63,7 +63,7 @@ const Landing = () => {
               className="h-auto w-[450px] lg:w-[500px] 2xl:w-[600px] md:pt-5 -ml-px drop-shadow-2xl"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
