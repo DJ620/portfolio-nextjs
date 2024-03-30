@@ -18,7 +18,7 @@ const Footer = () => {
           <FaTwitterSquare />
         </a>
       </div>
-      <p className="text-center text-sm">DJ HERSH &#169;2024</p>
+      <p className="text-center text-sm">DJ HERSH -  &#169; 2024</p>
     </div>
   );
 };

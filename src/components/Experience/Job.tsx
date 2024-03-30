@@ -48,7 +48,7 @@ const Job = ({ job, currentJob, setCurrentJob }: jobProp) => {
         </div>
 
         {isOpen && (
-          <div className="pt-5 md:pt-0">
+          <div className="pt-5 md:pt-0 bounce">
             <div className="flex justify-between pb-3">
               <p className="font-semibold">{job.title}</p>
               <p className="italic">{job.dates}</p>

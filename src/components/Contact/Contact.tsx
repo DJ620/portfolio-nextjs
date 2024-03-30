@@ -44,7 +44,6 @@ const Contact = () => {
       <h1 className="pb-10 text-4xl font-bold text-cyan-700">CONTACT</h1>
       <form onSubmit={handleSubmit} className="space-y-2 max-w-2xl mx-auto">
         <div className="form-control">
-          {/* <label>Name</label> */}
           <input
             type="text"
             name="user_name"
@@ -55,7 +54,6 @@ const Contact = () => {
           />
         </div>
         <div className="form-control">
-          {/* <label>Email Address</label> */}
           <input
             type="text"
             name="user_email"
@@ -66,7 +64,6 @@ const Contact = () => {
           />
         </div>
         <div className="form-control">
-          {/* <label>Message</label> */}
           <textarea
             name="message"
             value={form.message}
@@ -80,7 +77,7 @@ const Contact = () => {
           <button
             type="submit"
             value="send"
-            className="border-2 px-2 text-cyan-700 hover:bg-cyan-700 hover:text-white border-cyan-700 w-20 rounded"
+            className="border-2 px-2 py-1 text-2xl text-cyan-700 hover:bg-cyan-700 hover:text-white border-cyan-700 w-28 rounded"
           >
             Submit
           </button>

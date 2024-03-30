@@ -5,7 +5,7 @@ import {
   FaReact,
   FaBootstrap,
   FaNodeJs,
-  FaGitAlt
+  FaGitAlt,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import {
@@ -34,21 +34,37 @@ const Toolbox = () => {
   const tools = [
     { tech: "HTML", icon: <FaHtml5 />, style: "text-orange-600" },
     { tech: "CSS", icon: <FaCss3Alt />, style: "text-blue-600" },
-    { tech: "JavaScript", icon: <IoLogoJavascript />, style: "text-yellow-500" },
-    { tech: "TypeScript", icon: <BiLogoTypescript />, style: "text-blue-600 text-3xl" },
+    {
+      tech: "JavaScript",
+      icon: <IoLogoJavascript />,
+      style: "text-yellow-500",
+    },
+    {
+      tech: "TypeScript",
+      icon: <BiLogoTypescript />,
+      style: "text-blue-600 text-3xl",
+    },
     { tech: "jQuery", icon: <BiLogoJquery />, style: "text-blue-700" },
     { tech: "React", icon: <FaReact />, style: "text-blue-500" },
-    { tech: "React Native", icon: <TbBrandReactNative />, style: "text-blue-500" },
+    {
+      tech: "React Native",
+      icon: <TbBrandReactNative />,
+      style: "text-blue-500",
+    },
     { tech: "Redux", icon: <TbBrandRedux />, style: "text-purple-700" },
     { tech: "Next.js", icon: <TbBrandNextjs /> },
-    { tech: "TailwindCSS", icon: <BiLogoTailwindCss />, style: "text-blue-400 text-3xl" },
+    {
+      tech: "TailwindCSS",
+      icon: <BiLogoTailwindCss />,
+      style: "text-blue-400 text-3xl",
+    },
     { tech: "Bootstrap", icon: <FaBootstrap />, style: "text-purple-800" },
     { tech: "Node", icon: <FaNodeJs />, style: "text-green-700" },
     { tech: "Express", icon: <SiExpress /> },
     { tech: "MongoDB", icon: <SiMongodb />, style: "text-green-600 text-3xl" },
     { tech: "Mongoose", icon: <SiMongoose />, style: "text-red-800 text-3xl" },
     { tech: "MySQL", icon: <GrMysql />, style: "text-blue-700" },
-    { tech: "Sequelize", icon: <SiSequelize />, style: "text-blue-500"  },
+    { tech: "Sequelize", icon: <SiSequelize />, style: "text-blue-500" },
     { tech: "Passport", icon: <SiPassport /> },
     { tech: "JSON Web Token (JWT)", icon: <SiJsonwebtokens /> },
     { tech: "Axios", icon: <SiAxios />, style: "text-purple-900" },
@@ -57,12 +73,12 @@ const Toolbox = () => {
   ];
 
   return (
-    <div className="flex flex-wrap gap-5 px-5 py-10">
+    <div className="flex flex-wrap justify-center gap-5 px-5 py-10">
       {tools.map((tool, index) => {
         return (
           <div key={index} className="flex items-center gap-1 text-2xl">
             <div className={`${tool.style && tool.style}`}>{tool.icon}</div>
-            <p className="text-2xl">{tool.tech}</p>
+            <p className="text-base">{tool.tech}</p>
           </div>
         );
       })}

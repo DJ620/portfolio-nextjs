@@ -3,6 +3,7 @@ import { useState } from "react";
 import Job from "./Job";
 import { jobs } from "../../../public/Assets/JobsInfo";
 import { roboto } from "../../../public/Assets/Fonts";
+import JobTitle from "./JobTitle";
 
 const Resume = () => {
   const [currentJob, setCurrentJob] = useState<string>("");
@@ -16,19 +17,12 @@ const Resume = () => {
   };
 
   return (
-    <div className={`md:flex md:border-l-2 md:border-cyan-700 md:justify-between md:gap-10 ${roboto.className}`}>
+    <div className={`md:flex md:justify-between md:gap-10 ${roboto.className}`}>
       <div className="hidden space-y-20 md:block">
         {jobs.map((job, index) => {
           return (
-            <div key={index} className={`pb-2 ${
-                job.company === currentJob && "text-cyan-700 border-b-2 border-cyan-700"
-              }`}>
-              <p
-                className={`text-xl uppercase text-nowrap cursor-pointer pl-5`}
-                onClick={() => handleChangeJob(job.company)}
-              >
-                {job.company}
-              </p>
+            <div key={index}>
+              <JobTitle job={job} currentJob={currentJob} handleChangeJob={handleChangeJob} />
             </div>
           );
         })}
