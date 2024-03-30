@@ -21,7 +21,7 @@ const Experience = () => {
       
       <div className="mt-10 flex justify-center">
         <a
-          href="/djHershRes.pdf"
+          href="djHershRes.pdf"
           target="_blank"
           className="border-2 rounded border-cyan-700 text-cyan-700 hover:bg-cyan-700 hover:text-white p-2"
         >

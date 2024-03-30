@@ -8,7 +8,7 @@ const Header = () => {
     <header className="relative w-full px-2 h-14 py-1 bg-white border-b bg-opacity-90 border-slate-100 md:px-5">
       <div className="flex justify-between contain-w">
         <div className="flex items-center">
-          <a href="/#" className="px-2 py-1 text-3xl font-extrabold text-white rounded-full bg-cyan-700 text-shadow-sm shadow-black">
+          <a href="#" className="px-2 py-1 text-3xl font-extrabold text-white rounded-full bg-cyan-700 text-shadow-sm shadow-black">
             DJ
           </a>
         </div>
