@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import Button from "../reusable/Button";
 
 type form = {
   user_name: string;
@@ -50,7 +51,7 @@ const Contact = () => {
             value={form.user_name}
             placeholder="Name"
             onChange={(e) => setForm({ ...form, user_name: e.target.value })}
-            className="p-1 bg-cyan-700 border-2 text-slate-400"
+            className="p-1 bg-cyan-700 border-2 text-slate-400 rounded-lg"
           />
         </div>
         <div className="form-control">
@@ -60,7 +61,7 @@ const Contact = () => {
             value={form.user_email}
             placeholder="Email"
             onChange={(e) => setForm({ ...form, user_email: e.target.value })}
-            className="p-1 bg-cyan-700 border-2 text-slate-400"
+            className="p-1 bg-cyan-700 border-2 text-slate-400 rounded-lg"
           />
         </div>
         <div className="form-control">
@@ -70,17 +71,18 @@ const Contact = () => {
             placeholder="Enter Message"
             rows={3}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className="p-1 bg-cyan-700 border-2 text-slate-400"
+            className="p-1 bg-cyan-700 border-2 text-slate-400 rounded-lg"
           />
         </div>
         <div className="flex justify-end">
-          <button
+          {/* <button
             type="submit"
             value="send"
             className="border-2 px-2 py-1 text-2xl text-cyan-700 hover:bg-cyan-700 hover:text-white border-cyan-700 w-28 rounded"
           >
             Submit
-          </button>
+          </button> */}
+          <Button text="Submit" type="submit" value="send" />
         </div>
       </form>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Resume from "./Resume";
 import Toolbox from "./Toolbox";
 import { roboto } from "../../../public/Assets/Fonts";
+import Button from "../reusable/Button";
 
 const Experience = () => {
   return (
@@ -23,9 +24,9 @@ const Experience = () => {
         <a
           href="djHershRes.pdf"
           target="_blank"
-          className="border-2 rounded border-cyan-700 text-cyan-700 hover:bg-cyan-700 hover:text-white p-2"
+          // className="border-2 rounded border-cyan-700 text-cyan-700 hover:bg-cyan-700 hover:text-white p-2"
         >
-          Download Resume
+          <Button text="Download Resume" />
         </a>
       </div>
     </div>
