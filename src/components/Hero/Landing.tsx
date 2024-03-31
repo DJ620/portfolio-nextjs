@@ -58,6 +58,7 @@ const Landing = () => {
           </div>
           <div>
             <Image
+              priority
               src={fancyHeadshot}
               alt="headshot"
               className="h-auto w-[450px] lg:w-[500px] 2xl:w-[600px] md:pt-5 -ml-px drop-shadow-2xl"
