@@ -5,13 +5,13 @@ import { roboto } from "../../../public/Assets/Fonts";
 
 type props = {
   project: {
-    name: string
-    deployed: string
-    image: StaticImageData
-    repo: string
-    description: string
-    tech: string[]
-  }
+    name: string;
+    deployed: string;
+    image: StaticImageData;
+    repo: string;
+    description: string;
+    tech: string[];
+  };
 };
 
 const Modal = ({ project }: props) => {
@@ -20,23 +20,23 @@ const Modal = ({ project }: props) => {
       <dialog id="my_modal_2" className="modal">
         <div className="bg-white modal-box max-h-[85vh] overflow-hidden pb-0 md:max-w-[98vw] lg:max-w-[1100px] min-w-0 px-0 md:pt-0">
           <div className="flex flex-col md:flex-row mx-auto md:justify-between max-h-[70vh] md:max-h-[600px] overflow-scroll  md:items-center px-5 md:px-0">
-            <Image
-              src={project.image}
-              alt={project.name}
-              className="rounded-lg h-80 w-auto mx-auto md:mx-0 md:w-[50vw] max-w-[550px] md:h-auto md:rounded-none"
-            />
+            <div>
+              <Image
+                src={project.image}
+                alt={project.name}
+                className="rounded-lg h-80 w-auto mx-auto md:mx-0 md:w-full max-w-[550px] md:h-auto md:rounded-none"
+              />
+            </div>
             <div className="px-4 md:w-[46vw] max-w-[700px]">
               <h1 className="text-3xl text-center text-cyan-700 font-semibold mb-2 md:mb-8">
                 {project.name}
               </h1>
-              <div className={`md:max-h-[350px] lg:max-h-[550px] xl:max-h-full pb-2 md:overflow-scroll ${roboto.className} text-base`}>
-                <p>
-                  {project.description}
-                </p>
+              <div
+                className={`md:max-h-[350px] lg:max-h-[550px] xl:max-h-full pb-2 md:overflow-scroll ${roboto.className} text-base`}
+              >
+                <p>{project.description}</p>
                 <p className="mt-5">Tools Used:</p>
-                <p>
-                  {project.tech.join(" / ")}
-                </p>
+                <p>{project.tech.join(" / ")}</p>
               </div>
             </div>
           </div>
