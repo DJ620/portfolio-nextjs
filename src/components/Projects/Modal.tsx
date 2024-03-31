@@ -19,7 +19,7 @@ const Modal = ({ project }: props) => {
     <>
       <dialog id="my_modal_2" className="modal">
         <div className="bg-white modal-box max-h-[85vh] overflow-hidden pb-0 md:max-w-[98vw] lg:max-w-[1100px] min-w-0 px-0 md:pt-0">
-          <div className="flex flex-col md:flex-row mx-auto md:justify-between max-h-[70vh] md:max-h-[600px] overflow-scroll  md:items-center px-5 md:px-0">
+          <div className="flex flex-col md:flex-row mx-auto md:justify-between max-h-[70vh] md:max-h-[700px] overflow-scroll  md:items-center px-5 md:px-0">
             <div>
               <Image
                 src={project.image}
