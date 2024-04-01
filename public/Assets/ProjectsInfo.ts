@@ -26,12 +26,12 @@ export const projectsInfo = [
         tech: ["React", "Redux", "Express", "MongoDB", "Mongoose", "Axios", "Passport", "JSONwebtoken", "React-Bootstrap"]
     },
     {
-        name: "Reading Tracker",
+        name: "StoryShelf",
         deployed: "https://dj-reading-tracker.netlify.app",
         image: bookTracker,
         repo: "https://github.com/DJ620/Reading-Tracker",
-        description: "This is an application I built to track reading progress. It uses the Google Books API to grab the data of any book, and allows you to log all of your reading sessions, including how much of the book you read, how long you read for, any quotes you want to jot down, and you can add your own notes.",
-        tech: ["React", "Express", "MongoDB", "Mongoose", "JSONWebtoken", "React-Bootstrap", "Google Books API", "Axios", "Passport"]
+        description: "StoryShelf is an application I built to track reading progress. It uses the Google Books API to grab the data of any book, and allows you to log all of your reading sessions, including how much of the book you read, how long you read for, any quotes you want to jot down, and you can add your own notes.",
+        tech: ["React", "Express", "MongoDB", "Mongoose", "Node", "JSONWebtoken", "React-Bootstrap", "Google Books API", "Axios", "Passport"]
     },
     // {
     //     name: "Store Front",
