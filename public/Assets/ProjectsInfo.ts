@@ -27,7 +27,7 @@ export const projectsInfo = [
     },
     {
         name: "StoryShelf",
-        deployed: "https://dj-reading-tracker.netlify.app",
+        deployed: "https://story-shelf.netlify.app",
         image: bookTracker,
         repo: "https://github.com/DJ620/Reading-Tracker",
         description: "StoryShelf is an application I built to track reading progress. It uses the Google Books API to grab the data of any book, and allows you to log all of your reading sessions, including how much of the book you read, how long you read for, any quotes you want to jot down, and you can add your own notes.",
