@@ -9,9 +9,9 @@ type jobProp = {
     dates: string;
     description: string;
     bullets: string[];
-  }
-  currentJob: string
-  setCurrentJob: any
+  };
+  currentJob: string;
+  setCurrentJob: any;
 };
 
 const Job = ({ job, currentJob, setCurrentJob }: jobProp) => {
@@ -31,7 +31,7 @@ const Job = ({ job, currentJob, setCurrentJob }: jobProp) => {
       setCurrentJob("");
     } else {
       setCurrentJob(job.company);
-    };
+    }
   };
 
   return (
@@ -41,7 +41,15 @@ const Job = ({ job, currentJob, setCurrentJob }: jobProp) => {
           className="flex justify-between cursor-pointer md:hidden"
           onClick={handleToggle}
         >
-          <p className={`text-xl text-nowrap uppercase ${isOpen && "text-cyan-700"}`}>{job.company}</p>
+          <p
+            className={`text-xl text-nowrap uppercase ${
+              isOpen
+                ? "text-cyan-700 font-extrabold"
+                : "text-slate-300 font-light hover:text-slate-400"
+            }`}
+          >
+            {job.company}
+          </p>
           <div className="text-4xl text-cyan-700 md:hidden">
             {isOpen ? <PiCaretUpLight /> : <PiCaretDownLight />}
           </div>
