@@ -21,7 +21,7 @@ export const projectsInfo = [
         name: "BingeTrack",
         deployed: "https://bingetrack.netlify.app/",
         image: tvtracker,
-        repo: "https://github.com/DJ620/TV-Tracker",
+        repo: "https://github.com/DJ620/BingeTrack",
         description: "This is a mobile-responsive React web application I built that allows users to track the TV shows they watch. It utilizes the TV Maze API to gather information on any show a user chooses, and keeps track of what episodes have and have not been watched. Once a show is in a user's Library, it automatically lets them know if they have a new episode available for the show, if it is up to date, or if the user has not started watching the show. You can create your own account, or use the demo account (username: demo, password: demo123)",
         tech: ["React", "Redux", "Express", "MongoDB", "Mongoose", "Node", "Axios", "Passport", "JSONwebtoken", "React-Bootstrap"]
     },
@@ -29,7 +29,7 @@ export const projectsInfo = [
         name: "StoryShelf",
         deployed: "https://story-shelf.netlify.app",
         image: bookTracker,
-        repo: "https://github.com/DJ620/Reading-Tracker",
+        repo: "https://github.com/DJ620/StoryShelf",
         description: "StoryShelf is an application I built to track reading progress. It uses the Google Books API to grab the data of any book, and allows you to log all of your reading sessions, including how much of the book you read, how long you read for, any quotes you want to jot down, and you can add your own notes.",
         tech: ["React", "Express", "MongoDB", "Mongoose", "Node", "JSONWebtoken", "React-Bootstrap", "Google Books API", "Axios", "Passport"]
     },

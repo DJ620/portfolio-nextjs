@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import Button from "../reusable/Button";
 import { useInView } from "framer-motion";
+import EmailModal from "./EmailModal";
 
 type form = {
   user_name: string;
@@ -31,12 +32,14 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setForm({
             user_name: "",
             user_email: "",
             message: "",
           });
+          (
+            document.getElementById("my_modal") as HTMLDialogElement
+          ).showModal();
         },
         (error) => {
           console.log(error.text);
@@ -89,16 +92,10 @@ const Contact = () => {
           />
         </div>
         <div className="flex justify-end">
-          {/* <button
-            type="submit"
-            value="send"
-            className="border-2 px-2 py-1 text-2xl text-cyan-700 hover:bg-cyan-700 hover:text-white border-cyan-700 w-28 rounded"
-          >
-            Submit
-          </button> */}
           <Button text="Submit" type="submit" value="send" />
         </div>
       </form>
+      <EmailModal />
     </div>
   );
 };
