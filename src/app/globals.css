@@ -154,6 +154,10 @@ html {
   animation: landing 0.75s;
 }
 
+.button-swipe.border-none {
+  border: none;
+}
+
 .button-swipe {
   color: rgb(14 116 144);
   text-transform: uppercase;
@@ -189,7 +193,7 @@ html {
 }
 
 .button-swipe:hover::before {
-  width: 160%;
+  width: 170%;
 }
 
 .svgContainer {
