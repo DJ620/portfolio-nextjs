@@ -7,6 +7,7 @@ type jobProp = {
     company: string;
     title: string;
     dates: string;
+    about: string;
     description: string;
     bullets: string[];
   };
@@ -61,7 +62,9 @@ const Job = ({ job, currentJob, setCurrentJob }: jobProp) => {
               <p className="font-semibold">{job.title}</p>
               <p className="italic">{job.dates}</p>
             </div>
-            <p>{job.description}</p>
+            <p>{job.about}</p>
+            <p className="mt-3">{job.description}</p>
+            <p className="mt-5">Key Contributions:</p>
             <ul className="pt-3 pl-8 space-y-3 list-disc list-inside">
               {job.bullets.map((bullet, index) => {
                 return <li key={index}>{bullet}</li>;

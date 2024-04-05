@@ -28,6 +28,11 @@ const Experience = () => {
         }`}
       >
         <Resume />
+        <div className={`mt-10 text-right text-base ${roboto.className}`} style={{wordSpacing: "-4px", letterSpacing: "-1px"}}>
+          <hr/>
+          <p className="mt-10 mb-3"><span className="font-extrabold text-cyan-700">Full Stack Web Development Certificate</span> | UCLA Extension, Los Angeles, CA, January 2021</p>
+          <p><span className="font-extrabold text-cyan-700">Bachelor of Fine Arts</span>, Musical Theatre | AMDA, Los Angeles, CA, June 2011</p>
+        </div>
         <p className={`mt-10 md:pl-5 uppercase ${roboto.className}`}>
           My toolbox
         </p>
@@ -41,7 +46,6 @@ const Experience = () => {
         <a
           href="djHershRes.pdf"
           target="_blank"
-          // className="border-2 rounded border-cyan-700 text-cyan-700 hover:bg-cyan-700 hover:text-white p-2"
         >
           <Button text="Download Resume" />
         </a>
