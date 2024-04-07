@@ -19,7 +19,7 @@ const About = () => {
         <h1 className={`pb-10 text-4xl font-bold text-cyan-700 header-slide ${isInView && "slide-in-left"}`} ref={ref}>ABOUT</h1>
         <div className={`space-y-5 text-base ${roboto.className} ${isInView && "slide-in-up"}`}>
           <p>
-            Hey there, I'm DJ – a passionate frontend developer hailing from the
+            Hey there, I'm DJ – a passionate software engineer hailing from the
             vibrant city of Los Angeles. With over three years of professional
             experience in the industry, I've immersed myself in the dynamic
             world of web development, specializing in the MERN stack.

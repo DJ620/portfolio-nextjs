@@ -25,7 +25,7 @@ const Landing = () => {
               DJ HERSH
             </p>
             <p className="text-3xl font-bold text-neutral-800 lg:text-4xl 2xl:text-5xl sm:text-nowrap">
-              Frontend Web Developer
+              Software Engineer
             </p>
             <div className="mt-5 text-lg h-20 w-[90vw] md:w-[460px] md:mt-20 md:h-auto xl:text-xl 2xl:text-2xl 2xl:w-[650px] xl:w-[550px] mx-auto">
               <TypeAnimation
