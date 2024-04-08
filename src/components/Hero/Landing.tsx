@@ -21,10 +21,10 @@ const Landing = () => {
           className={`md:flex md:flex-row-reverse landing`}
         >
           <div className="mx-auto relative my-5 md:flex md:flex-col md:items-center md:justify-center">
-            <p className="font-extrabold text-white text-7xl lg:text-8xl 2xl:text-9xl">
-              DJ HERSH
+            <p className="font-extrabold text-white text-nowrap text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+              DANIEL (DJ) HERSH
             </p>
-            <p className="text-3xl font-bold text-neutral-800 lg:text-4xl 2xl:text-5xl sm:text-nowrap">
+            <p className="text-2xl sm:text-4xl md:text-3xl lg:text-4xl font-bold text-neutral-800 xl:text-5xl 2xl:text-6xl sm:text-nowrap">
               Software Engineer
             </p>
             <div className="mt-5 text-lg h-20 w-[90vw] md:w-[460px] md:mt-20 md:h-auto xl:text-xl 2xl:text-2xl 2xl:w-[650px] xl:w-[550px] mx-auto">
